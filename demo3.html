@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>注册表</title>
+  <style>
+  body{padding: 50px;}
+  .m-form{min-height:400px;_height:400px;font-size:12px;}
+  .m-form fieldset{margin:10px 0;width:370px;padding:10px;}
+  .m-form thead th{padding-bottom:5px;font-weight:bold;}
+  .m-form th, .m-form td{padding:2px;vertical-align:top;}
+  .m-form label{margin:0 15px 0 4px;_margin-left:0;}
+  .m-form select{width:100px;}
+  .m-form .txt{width:200px;}
+  .m-form textarea{width:202px;}
+  .m-form .btn{width:75px;height:28px;}
+  .m-form  div{margin:5px 0;}
+  </style>
+</head>
+<body>
+  <form action="/login"  method="post" class="m-form">
+    <fieldset>
+      <label for="file">头像</label><input type="file" id="file">
+      <div>
+         <label for="name">昵称：</label>
+            <input class="txt" type="text" id="name" placeholder="昵称">
+        </div>
+      <div>
+         <label for="delivery">学历：</label>
+            <select id="delivery">
+                <option value="0" selected>大专</option>
+                <option value="1">本科</option>
+            </select>
+      </div>
+        <div>性别：</div>
+      <div>
+            <input class="rd" type="radio" name="sexy" id="rd_0" value="male"><label for="rd_0" >男</label>
+            <input class="rd" type="radio" name="sexy" id="rd_1" value="female"><label for="rd_1" >女</label>
+      </div>
+      <div>爱好：</div>
+      <div>
+        <input class="cb" type="checkbox" name="size" id="cb_0" value="movie"><label for="cb_0" checked>电影</label>
+        <input class="cb" type="checkbox" name="size" id="cb_1" value="photo"><label for="cb_1">摄影</label>
+        <input class="cb" type="checkbox" name="size" id="cb_1" value="music"><label for="cb_1">音乐</label>
+        <input class="cb" type="checkbox" name="size" id="cb_1" value="read"><label for="cb_1" checked>阅读</label>
+      </div>
+
+      <div>
+        <label for="feedback">签名：</label>
+        <textarea name="feedback" rows="4" id="feedback"></textarea>
+      </div>
+    </fieldset>
+    <div>
+      <button type="submit">保存</button>
+    </div>
+  </form>
+</body>
+</html>
