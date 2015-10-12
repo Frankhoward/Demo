@@ -2,41 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>自适应布局float</title>
+    <title>侧主栏</title>
     <style type="text/css">
-        html,body,.parent,.side,.main{
-            margin:0px;
-            padding:0px;
-            }
-        .parent{
-            height:600px;
-            line-height:600px;
-            margin:0 auto;
-            color:white;
-            text-align:center;
-            }
-        .side{
-            float:left;
-            width:200px;
-            background-color:#C00000;
-            }
-        .main{
-            background-color:#4F81BD;
-            margin-left:210px;
-            }
-        .clearfix:after{
-            content:".";
-            display:block;
-            clear:both;
-            visibility:hidden;
-            overflow:hidden;
-            height:0
-            }
-        </style>
+        .parent{width:810px;height:600px;background: #ffffff;margin: auto;}
+        .side{float:left;width:200px;height: 110px;background:red;margin-right: 10px;}
+        .main{float: left;width: 600px;height: 110px;background: blue;}
+        .clearfix{clear: both;}
+    </style>
 </head>
 <body>
-    <div class="parent clearfix"> 
-        <div class="side">侧栏</div>
-        <div class="main">主栏</div>
+<div class="parent clearfix">
+    <div class="side">侧栏</div>
+    <div class="main">主栏</div>
 </body>
 </html>
