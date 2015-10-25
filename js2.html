@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>multiply</title>
+</head>
+<body>
+    <script>
+        function multiply(){
+            var length=arguments.length,
+                    sum= 1,
+                    parameter;
+            for(var i=0;i<length;i++){
+                parameter=arguments[i];
+                sum=sum*parameter;
+            }
+            return sum;
+        }
+        alert(multiply(2,3));
+        alert(multiply(-1,3,4));
+        alert(multiply(1,2,3,4,5));
+    </script>
+</body>
+</html>
