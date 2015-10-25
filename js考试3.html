@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+<script>
+    var date=new Date(2001,8,11,8,26,8);
+    function formaDate(date,pattern){
+        var toDouble=function(n){
+            return n<10?'0'+n:n;
+        };
+        var reg=/([yY]{4}|MM|[dD]{2}|[hH]{2}|mm|[sS]{2})/g;
+        var str=pattern.replace(reg,function(item){
+            if(item=='MM')
+            return toDouble(date.getMonth()+1);
+            item=item.toLowerCase();
+            switch (item){
+                case 'yyyy':
+                    return date.getFullYear();
+                case 'dd':
+                    return toDouble(date.getData());
+                case 'hh':
+                    return toDouble(date.getHours());
+                case 'mm':
+                    return toDouble(date.getMinutes());
+                case 'ss':
+                    return toDouble(date.getSeconds());
+            }
+        });
+        return str;
+    }
+console.log(formaDate(date,'yyYy-MM-dD hh:mm:ss'));
+</script>
+</body>
+</html>

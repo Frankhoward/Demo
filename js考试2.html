@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Person</title>
+</head>
+<body>
+<script>
+    function search(arr,dst){
+        var index=pareseInt(arr.length/2);
+        for(var i=0;i<=Math.sqrt(arr.length);i++){
+            if(arr[index]==dst){
+                return index--;
+            }
+        if(arr[index]>dst){
+            index=pareseInt(index/2);
+        }
+        if(arr[index]<dst){
+            index=pareseInt((index+arr.length)/2);
+        }
+        }
+    }
+    var arr=[1,2,4,6,7,9,19,20,30,40,45,47];
+    alert(search(arr,45));
+</script>
+</body>
+</html>
